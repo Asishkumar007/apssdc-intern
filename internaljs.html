@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>incluing internal javascript</title>
+	<script type="text/javascript">
+		function generateMSG() {
+			alert('u got it....');
+			// body...
+		}
+	</script>
+	<script type="text/javascript" src="{% static 'js/myscript.js' %}"></script>
+</head>
+<body>
+	<h2>please click this button to get js alert</h2>
+<input type="button" name="button" value="click me" onclick="generateMSG()">
+	<h2>please click this button to get js alert from external js</h2>
+<input type="button" name="button" value="pressme" onclick="display()">
+</body>
+</html>
